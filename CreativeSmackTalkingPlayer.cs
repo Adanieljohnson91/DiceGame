@@ -10,9 +10,7 @@ namespace ShootingDice
 
         public override int Roll()
         {
-            int num = new Random().Next(Taunts.Count)-1;
-            Console.WriteLine(Taunts[num]);
-            // Return a random number between 1 and DiceSize
+            Console.WriteLine(Taunts[new Random().Next(Taunts.Count)-1]);
             return new Random().Next(DiceSize) + 1;
         }
         public CreativeSmackTalkingPlayer(string t1, string t2, string t3)
